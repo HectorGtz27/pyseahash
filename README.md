@@ -1,5 +1,12 @@
 # pyseahash
 
+## ✅ Prerequisites
+
+- Python **3.13** installed
+- Rust and Cargo installed
+- `maturin` installed (`pip install maturin`)
+- `pyseahash` module built and available as a `.whl` package
+
 ## 📦 Step 1: Clone `pyseahash`
 
 First, clone the `pyseahash` repository from GitHub:
