@@ -97,13 +97,6 @@ C:\Users\HectorGtz27\pyseahash\target\wheels\
 
 ---
 
-### 🎯 Next Steps
-
-- Install the `.whl` package via `pip install <path_to_whl_file>`
-- Use `pyseahash` in your Python projects
-
----
-
 ### 📝 Notes
 
 - Ensure Rust is installed and properly set up before building.
