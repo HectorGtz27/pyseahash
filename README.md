@@ -2,8 +2,6 @@
 
 A Python wrapper for **SeaHash**, implemented in Rust for high-performance hashing.
 
----
-
 ## ✅ Prerequisites
 
 Before getting started, ensure you have the following installed:
@@ -12,8 +10,6 @@ Before getting started, ensure you have the following installed:
 - **Rust and Cargo** (Install from [rustup.rs](https://rustup.rs/))
 - **maturin** (Install via `pip install maturin`)
 - **pyseahash** built and available as a `.whl` package (if not, follow Step 4)
-
----
 
 ## 📦 Step 1: Clone `pyseahash`
 
@@ -28,8 +24,6 @@ Navigate into the project directory:
 ```powershell
 cd pyseahash
 ```
-
----
 
 ## 🛠 Step 2: Set Up a Virtual Environment
 
@@ -51,8 +45,6 @@ py -m venv .venv
 .venv\Scripts\activate
 ```
 
----
-
 ## 🔧 Step 3: Install Dependencies
 
 Ensure all required dependencies are installed inside the virtual environment.
@@ -64,8 +56,6 @@ pip install -r requirements.txt
 ```
 
 _(Only if `requirements.txt` exists.)_
-
----
 
 ## 🏗️ Step 4: Build the `.whl` Package (If Not Available)
 
@@ -95,7 +85,24 @@ After building, the `.whl` file will be available in:
 C:\Users\HectorGtz27\pyseahash\target\wheels\
 ```
 
----
+## 🔄 Updating `pyseahash`
+
+If `pyseahash` is updated, rebuild it and reinstall:
+
+```powershell
+cd C:\Users\HectorGtz27\pyseahash
+.venv\Scripts\activate
+maturin build
+pip install --upgrade C:\Users\HectorGtz27\pyseahash\target\wheels\pyseahash-0.1.0-cp313-cp313-win_amd64.whl
+```
+
+Then switch back to `dicom_retriever` and run it again:
+
+```powershell
+cd C:\Users\HectorGtz27\Documents\Hector\FNNDSC\dicom_retriever
+.venv\Scripts\activate
+python main.py
+```
 
 ### 📝 Notes
 
