@@ -1,58 +1,55 @@
-# pyseahash
+## 🏗️ Create the `.whl` Package for `pyseahash`
 
-A high-performance Python binding for the [seahash](https://github.com/ticki/seahash) algorithm, implemented in Rust.
+If you need to build the `.whl` file for `pyseahash`, follow these steps:
 
-## Description
+### ➤ Activate the virtual environment:
 
-`pyseahash` provides Python bindings for the seahash algorithm, which is a fast non-cryptographic hash function. The implementation is written in Rust and exposed to Python using PyO3, offering near-native performance.
-
-## Features
-
-- Fast, non-cryptographic hashing
-- Zero-copy Python bindings
-- Thread-safe implementation
-- Compatible with Python 3.8+
-
-## Installation
-
-You can install `pyseahash` using pip:
-
-```bash
-pip install pyseahash
+```powershell
+.venv\Scripts\activate
 ```
 
-## Usage
+### ➤ Build the `.whl` file using `maturin`:
 
-```python
-import pyseahash
-
-# Hash a string
-hash_value = pyseahash.hash("Hello, World!")
-
-# Hash bytes
-hash_value = pyseahash.hash(b"Hello, World!")
-
-# Hash a file
-with open("example.txt", "rb") as f:
-    hash_value = pyseahash.hash(f.read())
+```powershell
+maturin build
 ```
 
-## Development
+After building, the `.whl` file will be located in:
 
-This project uses:
+```powershell
+C:\Users\HectorGtz27\pyseahash\target\wheels\
+```
 
-- Rust for the core implementation
-- PyO3 for Python bindings
-- Maturin for building the Python package
+## 🚀 Step 5: Run `dicom_retriever`
 
-To set up the development environment:
+Once everything is set up, run the main script:
 
-1. Install Rust and Python 3.8+
-2. Install maturin:
-   ```bash
-   pip install maturin
-   ```
-3. Build the package:
-   ```bash
-   maturin develop
-   ```
+```powershell
+python main.py
+```
+
+## 🔄 Updating `pyseahash`
+
+If `pyseahash` is updated, rebuild it and reinstall:
+
+```powershell
+cd C:\Users\HectorGtz27\pyseahash
+.venv\Scripts\activate
+maturin build
+pip install --upgrade C:\Users\HectorGtz27\pyseahash\target\wheels\pyseahash-0.1.0-cp313-cp313-win_amd64.whl
+```
+
+Then switch back to `dicom_retriever` and run it again:
+
+```powershell
+cd C:\Users\HectorGtz27\Documents\Hector\FNNDSC\dicom_retriever
+.venv\Scripts\activate
+python main.py
+```
+
+## 🎯 Summary
+
+- Always **activate the virtual environment** before running the script.
+- Ensure `pyseahash` is **installed inside `dicom_retriever`'s virtual environment`**.
+- If `pyseahash` is updated, **rebuild & reinstall it**.
+- Run `python main.py` inside `dicom_retriever` to execute the project.
