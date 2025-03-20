@@ -41,7 +41,19 @@ py -m venv .venv
 .venv\Scripts\activate
 ```
 
-## 🏗️ Step 2: Create the `.whl` Package for `pyseahash` (IN CASE YOU DONT HAVE .whl)
+## 🔧 Step 3: Install Dependencies
+
+Ensure all required dependencies are installed inside `pyseahash`'s virtual environment.
+
+### ➤ Install dependencies:
+
+```powershell
+pip install -r requirements.txt
+```
+
+_(If a `requirements.txt` file exists.)_
+
+## 🏗️ Step 4: Create the `.whl` Package for `pyseahash` (IN CASE YOU DONT HAVE .whl)
 
 If you need to build the `.whl` file for `pyseahash`, follow these steps:
 
