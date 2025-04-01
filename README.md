@@ -18,8 +18,6 @@ You can install `pyseahash` directly from the GitHub repo using pip:
 pip install git+https://github.com/HectorGtz27/pyseahash.git@main
 ```
 
-````
-
 ---
 
 ## 🛠 For Local Development
@@ -93,4 +91,7 @@ pyseahash @ git+https://github.com/HectorGtz27/pyseahash.git@main
 
 > Or pin to a specific tag:
 > `@v0.1.0` once you create a release.
-````
+
+```
+
+```
