@@ -93,11 +93,4 @@ pyseahash @ git+https://github.com/HectorGtz27/pyseahash.git@main
 
 > Or pin to a specific tag:
 > `@v0.1.0` once you create a release.
-
----
-
-## 📝 Notes
-
-- If you run into build errors, try running `cargo check` to debug.
-- Make sure `rustup` is properly installed and the toolchain is up to date.
 ````
