@@ -2,109 +2,102 @@
 
 A Python wrapper for **SeaHash**, implemented in Rust for high-performance hashing.
 
-## ✅ Prerequisites
+## ✨ Features
 
-Before getting started, ensure you have the following installed:
+- Fast hashing via native Rust code
+- Easy Python integration using [maturin](https://github.com/PyO3/maturin)
+- Lightweight and portable
 
-- **Python 3.13**
-- **Rust and Cargo** (Install from [rustup.rs](https://rustup.rs/))
-- **maturin** (Install via `pip install maturin`)
-- **pyseahash** built and available as a `.whl` package (if not, follow Step 4)
+---
 
-## 📦 Step 1: Clone `pyseahash`
+## 📦 Installation
 
-First, clone the repository:
+You can install `pyseahash` directly from the GitHub repo using pip:
 
-```powershell
-git clone https://github.com/HectorGtz27/pyseahash.git
+```bash
+pip install git+https://github.com/HectorGtz27/pyseahash.git@main
 ```
 
-Navigate into the project directory:
+````
 
-```powershell
+---
+
+## 🛠 For Local Development
+
+If you want to develop or contribute to `pyseahash`, follow the steps below.
+
+### ✅ Prerequisites
+
+- Python **3.13**
+- [Rust & Cargo](https://rustup.rs/)
+- `maturin`:
+  Install it with:
+  ```bash
+  pip install maturin
+  ```
+
+---
+
+### 📁 Step 1: Clone the repository
+
+```bash
+git clone https://github.com/HectorGtz27/pyseahash.git
 cd pyseahash
 ```
 
-## 🛠 Step 2: Set Up a Virtual Environment
+---
 
-Check if the virtual environment `.venv` exists:
+### 🧪 Step 2: (Optional) Set up a virtual environment
 
-```powershell
-ls
+```bash
+python -m venv .venv
+source .venv/bin/activate      # On Linux/macOS
+.venv\Scripts\activate         # On Windows
 ```
 
-### ➤ If `.venv` does **not** exist, create it:
+---
 
-```powershell
-py -m venv .venv
-```
+### 🏗️ Step 3: Build the package
 
-### ➤ Activate the virtual environment:
+Use `maturin` to build the wheel:
 
-```powershell
-.venv\Scripts\activate
-```
-
-## 🔧 Step 3: Install Dependencies
-
-Ensure all required dependencies are installed inside the virtual environment.
-
-### ➤ Install dependencies:
-
-```powershell
-pip install -r requirements.txt
-```
-
-_(Only if `requirements.txt` exists.)_
-
-## 🏗️ Step 4: Build the `.whl` Package (If Not Available)
-
-If you don't have the `.whl` package, follow these steps to build it:
-
-### ➤ Navigate to the `pyseahash` directory:
-
-```powershell
-cd C:\Users\HectorGtz27\pyseahash
-```
-
-### ➤ Activate the virtual environment:
-
-```powershell
-.venv\Scripts\activate
-```
-
-### ➤ Build the `.whl` file using `maturin`:
-
-```powershell
+```bash
 maturin build
 ```
 
-After building, the `.whl` file will be available in:
+The built `.whl` file will be available in:
 
-```powershell
-C:\Users\HectorGtz27\pyseahash\target\wheels\
+```
+target/wheels/
 ```
 
-## 🔄 Updating `pyseahash`
+---
 
-If `pyseahash` is updated, rebuild it and reinstall:
+### 📥 Step 4: Install locally
 
-```powershell
-cd C:\Users\HectorGtz27\pyseahash
-.venv\Scripts\activate
-maturin build
-pip install --upgrade C:\Users\HectorGtz27\pyseahash\target\wheels\pyseahash-0.1.0-cp313-cp313-win_amd64.whl
+After building, you can install the wheel directly:
+
+```bash
+pip install target/wheels/pyseahash-*.whl
 ```
 
-Then switch back to `dicom_retriever` and run it again:
+---
 
-```powershell
-cd C:\Users\HectorGtz27\Documents\Hector\FNNDSC\dicom_retriever
-.venv\Scripts\activate
-python main.py
+## 🔄 Updating `pyseahash` in another project
+
+If you're working on a project that depends on `pyseahash`, just reference it in your `requirements.in` or `requirements.txt` like so:
+
+```text
+pyseahash @ git+https://github.com/HectorGtz27/pyseahash.git@main
 ```
 
-### 📝 Notes
+> Or pin to a specific tag:
+> `@v0.1.0` once you create a release.
 
-- Ensure Rust is installed and properly set up before building.
-- If you encounter issues with `maturin build`, run `cargo check` inside the project directory to debug.
+---
+
+## 📝 Notes
+
+- If you run into build errors, try running `cargo check` to debug.
+- Make sure `rustup` is properly installed and the toolchain is up to date.
+````
