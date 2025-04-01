@@ -88,10 +88,3 @@ If you're working on a project that depends on `pyseahash`, just reference it in
 ```text
 pyseahash @ git+https://github.com/HectorGtz27/pyseahash.git@main
 ```
-
-> Or pin to a specific tag:
-> `@v0.1.0` once you create a release.
-
-```
-
-```
